@@ -1,10 +1,12 @@
-# sharedfs-pingpong - A demo program to illustrate sky.Storage's mounting feature.
+# sharedfs-pingpong - A demo to illustrate sky.Storage's mounting feature.
 #
-# This program implements coordination between two processes using a shared file
-# that they can access. The first process is called ping, and the second is pong
-# The ping process writes to the file, and the pong process reads from the file
-# Pong then writes to the file, and ping reads from the file. This continues
-# indefinitely until the user presses Ctrl-C.
+# This program implements coordination between two or more processes using a
+# shared file system that they can access.
+#
+# Simplest example is with two processes - the first process is called ping,
+# and the second is pong. The ping process writes to the file, and the pong
+# process reads from the file. Pong then writes to the file, and ping reads
+# from the file. This continues indefinitely until the user presses Ctrl-C.
 #
 # Usage:
 #   python main.py --process-id 0 --shared-path /tmp/ --num-processes 2
