@@ -1,4 +1,4 @@
-# sharedfs-pingpong - A simple utility to demo the power of sky.Storage.
+# sharedfs-pingpong - A demo program to illustrate sky.Storage's mounting feature.
 #
 # This program implements coordination between two processes using a shared file
 # that they can access. The first process is called ping, and the second is pong
@@ -16,7 +16,7 @@ import time
 
 # Parse command line arguments
 parser = argparse.ArgumentParser(
-    description='A simple utility to demo the power of sky.Storage.')
+    description='A demo program to illustrate sky.Storage mounting feature.')
 parser.add_argument('--process-id', '-p', type=int, default=0,
                     help='The process ID to assign this process. Start at 0.')
 parser.add_argument('--num-processes', '-n', type=int, default=2,
