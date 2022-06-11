@@ -58,10 +58,11 @@ class PingPong(object):
         while True:
             if os.path.exists(self.read_file_path):
                 data = self.read_input()
-                print(f'[Process {self.process_id}]: Got data: {data}')
-                time.sleep(1)
-                self.write_output()
-                self.delete_input()
+                if data:
+                    print(f'[Process {self.process_id}]: Got data: {data}')
+                    time.sleep(5)
+                    self.delete_input()
+                    self.write_output()
 
 
 def main():
