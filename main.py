@@ -60,8 +60,8 @@ class PingPong(object):
                 data = self.read_input()
                 if data:
                     print(f'[Process {self.process_id}]: Got data: {data}')
-                    time.sleep(5)
                     self.delete_input()
+                    time.sleep(5)
                     self.write_output()
 
 
